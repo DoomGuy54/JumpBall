@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blueviolet;
+}
+
+h1{
+    color:white;
+    text-align: center;
+    margin-top: 2%;
+}
+h2{
+    color:white;
+    text-align: center;
+    margin-top: 2%;
+}
+h3{
+    color:white;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.tela{
+    width: 80%;
+    height: 70vh;
+    border: 1px solid black;
+    margin: 0 auto;
+    position:relative;
+    overflow: hidden;
+    background-image: url(fundo.jpg);
+}
+.obst{
+    position:absolute;
+    bottom: 0;
+    width: 45%;
+    animation: animacao-obstaculo 1.5s infinite linear; /*Este código realiza a animação do obstaculo*/
+}
+.pers{
+    position: absolute;
+    width: 50%;
+    bottom: -17%;
+}
+.pulo{
+    animation: animacao-pers 530ms ease-out;
+}
+
+@keyframes animacao-obstaculo{ /*Este código estabelece as posições para a animação de loop do obstaculo*/
+    from{
+        right: -45%;
+    }
+    to{
+        right: 100%;
+    }
+
+}
+@keyframes animacao-pers{ /* Este código faz a animação de pulo do personagem*/
+    0%{
+        bottom: -17%;
+    }
+    40%{
+        bottom:17%;
+    }
+    50%{
+        bottom:17%;
+    }
+    60%{
+        bottom:17%;
+    }
+    100%{
+        bottom: -17%;
+    }
+
+}
